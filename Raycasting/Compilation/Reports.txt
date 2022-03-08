@@ -1,0 +1,31 @@
+Asymptotic:
+Config:
+[Raycasting configuration]
+Number of rays = 1401
+Insert rays = 1
+Time step = 0.001
+Simulation time = 1.3
+Cast type (sphere/plane) = plane
+Integrator type (Euler/RK4/GaussLegendre) = GaussLegendre
+Sphere X = 0.25
+Sphere Y = 0.25
+Sphere Radius = 0.1
+Adaptive time step = 1
+Load grid = 1
+Grid Interpolation Type (Linear/Cubic/Hermite/BSpline) = BSpline
+Max substepping = 2
+; Distance calculation
+Max distance parting = 30
+Collapse distance = 2.5
+Amplitude penalty = 0.05
+
+Time taken:
+Euler - 3s 450ms
+RK4 - 9s 250ms
+GL - abysmal 541s (Average iterations: 29, 44.3% of steps reach iterations limit, final error: 7.9e-7)
+
+
+Number of rays (GL, fast diff):
+BSpline - 8368
+Hermite - 8526
+Cubic - 8705
